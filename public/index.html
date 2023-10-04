@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gestion inmobiliaria LC</h1>
+      <h2>Base de Datos</h2>
+
+      <!-- formulario añadir vivienda -->
+      <div class="selectores">
+        <div class="formulario-añadir">
+          <h3>Añade aquí tu nueva propiedad:</h3>
+          <!-- prueba de form -->
+          <label for="tipo">Tipo de vivienda:</label>
+          <select id="tipo" name="tipo">
+            <option value="Casa">Casa</option>
+            <option value="Departamento">Departamento</option>
+            <option value="Chalet">Chalet</option>
+            <option value="Terreno">Terreno</option>
+          </select>
+
+          <label for="estado">Estado de la vivienda:</label>
+          <select id="estado" name="estado">
+            <option value="Alquiler">Alquiler</option>
+            <option value="Venta">Venta</option>
+          </select>
+          <textarea
+            placeholder="Descripcion completa de la vivienda"
+            id="descripcion"
+            name="descripcion"
+            rows="4"
+            cols="50"
+          ></textarea>
+
+          <input
+            type="text"
+            placeholder="Metros cuadrados construidos"
+            id="metros"
+            name="metros"
+          />
+          <input
+            type="text"
+            placeholder="Cuantas habitaciones tiene"
+            id="habitaciones"
+            name="habitaciones"
+          />
+          <input
+            type="text"
+            placeholder="Cuantos Baños tiene"
+            id="baños"
+            name="baños"
+          />
+          <input
+            type="text"
+            placeholder="Terreno o patio "
+            id="patio"
+            name="patio"
+          />
+          <input
+            type="text"
+            placeholder="Ciuadad donde se encuentra"
+            id="ciudad"
+            name="ciudad"
+          />
+          <form id="miFormulario">
+            <input type="file" id="imagen1" accept="image/*" />
+            <input type="file" id="imagen2" accept="image/*" />
+            <input type="file" id="imagen3" accept="image/*" />
+          </form>
+
+          <!--  <input type="text" placeholder="Imagen" id="img1" name="img1" />
+          <input type="text" placeholder="Imagen" id="img2" name="img2" />
+          <input type="text" placeholder="Imagen" id="img3" name="img3" /> -->
+          <!-- <input type="file" id="imagen1" name="imagen1" accept="image/*" />
+          <input type="file" id="imagen2" name="imagen2" accept="image/*" />
+          <input type="file" id="imagen3" name="imagen3" accept="image/*" /> -->
+          <input
+            type="text"
+            placeholder="Precio de la vivienda"
+            id="precio"
+            name="precio"
+          />
+          <button onclick="insertarVivienda()">Añadir</button>
+
+          <p id="mensaje"></p>
+        </div>
+        <!-- Buscar propiedad  -->
+        <div>
+          <h2>Buscar propiedad</h2>
+          <label for="tipoBusqueda">Tipo:</label>
+          <select id="tipoBusqueda" name="tipoBusqueda">
+            <option value="">Selecciona un tipo</option>
+            <option value="Casa">Casa</option>
+            <option value="Departamento">departamento</option>
+            <option value="Chalet">Chalet</option>
+            <option value="Terreno">Terreno</option>
+          </select>
+
+          <label for="estadoBusqueda">Estado:</label>
+          <select id="estadoBusqueda" name="estadoBusqueda">
+            <option value="">Selecciona un estado</option>
+            <option value="Alquiler">Alquiler</option>
+            <option value="Venta">Venta</option>
+          </select>
+
+          <label for="ciudadBusqueda">Ciudad:</label>
+          <input
+            type="text"
+            placeholder="Buscar por ciudad"
+            id="ciudadBusqueda"
+            name="ciudadBusqueda"
+          />
+          <button onclick="buscar()">Buscar</button>
+        </div>
+      </div>
+      <h2>Propiedas en la base de datos:</h2>
+      <!-- Mostrar tarjetas de viviendas -->
+      <div id="div1"></div>
+    </div>
+    <script src="./demo.js"></script>
+  </body>
+</html>
